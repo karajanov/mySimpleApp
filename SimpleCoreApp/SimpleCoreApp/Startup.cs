@@ -27,7 +27,10 @@ namespace SimpleCoreApp
             services.AddDbContext<FinalDB_IPContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
-            services.AddTransient<ICategoriesRepository, CategoriesRepository>();
+            services
+                .AddTransient<IProductsRepository, ProductsRepository>()
+                .AddTransient<ICategoriesRepository, CategoriesRepository>();
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

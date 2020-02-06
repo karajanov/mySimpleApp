@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+
+    var productsOfCategory = (ViewBag.ProductsOfCategory as List<Products>);
+    var categoryTitle = (ViewBag.CategoryTitle as string);
+
+    var bagsAreValid = productsOfCategory != null && categoryTitle != null;
+}
+
+<br />
+<br />
+
+@if (bagsAreValid)
+{
+    <h1>Category: @categoryTitle</h1>
+    <br />
+    <br />
+    if (productsOfCategory.Count != 0)
+    {
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-danger">
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in productsOfCategory)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h4 class="text-warning">No Products Found</h4>
+    }
+    <br />
+    <br />
+    <a href="@Url.Action("Index", "Home")">Back to List</a>
+}

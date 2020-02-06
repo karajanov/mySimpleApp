@@ -6,5 +6,6 @@ namespace SimpleCoreApp.Services.Interfaces
     public interface ITitles
     {
         Task<IEnumerable<string>> GetAllTitlesAsync();
+        Task<string> GetTitleByIdAsync(int id);
     }
 }

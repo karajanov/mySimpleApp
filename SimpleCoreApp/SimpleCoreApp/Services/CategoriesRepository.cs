@@ -21,5 +21,12 @@ namespace SimpleCoreApp.Services
 
             return titles;
         }
+
+        public async Task<string> GetTitleByIdAsync(int id)
+        {
+            return await (from c in GetDbSet()
+                          where c.Id == id
+                          select c.Title).FirstOrDefaultAsync();
+        }
     }
 }
