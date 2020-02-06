@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Success";
+
+    var productReport = (ViewBag.ProductReport as Products);
+    var updateProductReport = (ViewBag.UpdateReport as Products);
+}
+
+
+<br />
+<br />
+
+@if (productReport != null)
+{
+    <h2 class="text-success">Product Inserted Successfully</h2>
+    <br />
+    <br />
+    <h4>Product Insertion Report</h4>
+    <br />
+    <h6>Title : @productReport.Title</h6>
+    <h6>Price : @productReport.Price</h6>
+    <h6>Category id : @productReport.CategoryId</h6>
+    <br />
+    <br />
+    <a href="@Url.Action("Details", "Products", new { id = productReport.CategoryId })">Back to List</a>
+
+}
+
+@if (updateProductReport != null)
+{
+    <h2 class="text-success">Product Updated Successfully</h2>
+    <br />
+    <br />
+    <h4>Product Update Report</h4>
+    <br />
+    <h6>Title : @updateProductReport.Title</h6>
+    <h6>Price : @updateProductReport.Price</h6>
+    <h6>Category id : @updateProductReport.CategoryId</h6>
+    <br />
+    <br />
+    <a href="@Url.Action("Details", "Products", new { id = updateProductReport.CategoryId })">Back to List</a>
+}

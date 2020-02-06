@@ -139,5 +139,13 @@ C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcor
 C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\Razor\Views\Products\Insert.cshtml.g.cs
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\Razor\Views\Products\Details.cshtml.g.cs
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\AutoMapper.dll
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Success.cshtml.g.cs
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\Razor\Views\Products\Update.cshtml.g.cs
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\System.Net.Http.Formatting.dll
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\System.Web.Http.dll
+C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\SimpleCoreApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Borjan\Desktop\mySimpleApp\SimpleCoreApp\SimpleCoreApp\obj\Debug\netcoreapp3.0\Razor\Views\Products\List.cshtml.g.cs

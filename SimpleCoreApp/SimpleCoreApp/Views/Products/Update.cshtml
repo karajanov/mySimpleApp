@@ -1,0 +1,42 @@
+﻿@model SimpleCoreApp.Models.DataTransferObjects.UpdateProductViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<br />
+<br />
+<h1>Update Products Form</h1>
+<br />
+<br />
+
+<form method="post" asp-controller="Products" asp-action="UpdateProductPost" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+        <div class="form-group">
+            <label>Category</label>
+            <input asp-for="CategoryId" class="form-control" readonly value="@Model.CategoryId" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" placeholder="Enter a title" value="@Model.Title" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" placeholder="Enter a price" value="@Model.Price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div hidden>
+            <input asp-for="Id" value="@Model.Id" />
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
+        <br />
+        <a href="@Url.Action("Details", "Products", new { id = Model.CategoryId })">Back to List</a>
+    </fieldset>
+</form>
+

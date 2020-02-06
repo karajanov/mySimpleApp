@@ -1,0 +1,44 @@
+﻿@model SimpleCoreApp.Models.DataTransferObjects.ProductViewModel
+@{
+    ViewData["Title"] = "Insert";
+
+    var categoryInfo = (ViewBag.CategoryInfo as KeyValuePair<int, string>?);
+}
+
+<br />
+<br />
+<h1>Insert Products Form</h1>
+<br />
+<br />
+
+<form asp-controller="Products" asp-action="InsertProductPost" method="post" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+        <div class="form-group">
+            <label>Category</label>
+            <input class="form-control" readonly value="@categoryInfo.Value.Value" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" placeholder="Enter a title" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" placeholder="Enter a price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div hidden>
+            <input asp-for="CategoryId" value="@categoryInfo.Value.Key" />
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Insert</button>
+        <br />
+        <a href="@Url.Action("Index", "Home")">Back to List</a>
+    </fieldset>
+</form>
+

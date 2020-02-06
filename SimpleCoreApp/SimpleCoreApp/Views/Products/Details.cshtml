@@ -1,10 +1,9 @@
 ﻿
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Details";
 
     var productsOfCategory = (ViewBag.ProductsOfCategory as List<Products>);
     var categoryTitle = (ViewBag.CategoryTitle as string);
-
     var bagsAreValid = productsOfCategory != null && categoryTitle != null;
 }
 
@@ -23,6 +22,7 @@
                 <tr class="table-danger">
                     <th scope="col">Product</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +31,7 @@
                     <tr>
                         <td>@item.Title</td>
                         <td>@item.Price</td>
+                        <td><a href="@Url.Action("Update", "Products", new { id = item.Id })">Update</a></td>
                     </tr>
                 }
             </tbody>

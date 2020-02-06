@@ -18,6 +18,7 @@
             <tr class="table-primary">
                 <th scope="col">Category</th>
                 <th scope="col">Products List</th>
+                <th scope="col">New Products</th>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +26,8 @@
             {
             <tr>
                 <td>@item.Title</td>
-                <td>
-                    <a href="@Url.Action("List", "Products", new { id = @item.Id })">Display List</a>
-                </td>
+                <td><a href="@Url.Action("Details", "Products", new { id = item.Id })">Display List</a></td>
+                <td><a href="@Url.Action("Insert", "Products", new { id = item.Id })">Add to Category</a></td>
             </tr>
             }
         </tbody>
