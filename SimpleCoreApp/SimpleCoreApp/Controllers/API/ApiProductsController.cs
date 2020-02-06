@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SimpleCoreApp.Models;
 using SimpleCoreApp.Services.Interfaces;
@@ -17,19 +18,16 @@ namespace SimpleCoreApp.Controllers.API
         }
 
         [HttpPut("{id}")]
-        public HttpResponseMessage Put(int id, [FromQuery] decimal price)
+        public async Task<HttpResponseMessage> Put(int id, [FromQuery] decimal price)
         {
             if (id != 0)
             {
-                var product = new Products()
-                {
-                    Id = id,
-                    Price = price
-                };
+                var existingProduct = await productsRepository.GetByIdAsync(id);
+                existingProduct.Price = price;
 
                 try
                 {
-                    productsRepository.UpdateAsync(product);
+                    await productsRepository.UpdateAsync(existingProduct);
                     return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
                 }
                 catch
@@ -40,6 +38,5 @@ namespace SimpleCoreApp.Controllers.API
 
             return new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
         }
-
     }
 }
