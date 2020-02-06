@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using SimpleCoreApp.Models;
 using SimpleCoreApp.Services.Interfaces;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SimpleCoreApp.Controllers.API
@@ -28,11 +26,5 @@ namespace SimpleCoreApp.Controllers.API
             return x;
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromQuery] decimal price)
-        {
-
-        }
-        
     }
 }

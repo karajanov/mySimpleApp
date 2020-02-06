@@ -1,0 +1,2 @@
+
+Connection stringot smeni go vo appsettings.json -> Default, ne vo Web.config
